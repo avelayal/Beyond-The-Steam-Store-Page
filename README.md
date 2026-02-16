@@ -1,13 +1,14 @@
 # Beyond the Store Page: Clustering Steam Games by Player Engagement and Pricing
 
-Steam is one of the largest PC game marketplaces, yet store information such as price and discounts does not fully reflect how players engage with games. This project applies **unsupervised machine learning** to cluster Steam games using pricing and engagement-related features, including playtime, ownership estimates, reviews, and popularity indicators.
+Steam is among the largest PC game marketplaces; however, store information such as price and discounts does not fully capture player engagement. This study applies unsupervised machine learning to cluster Steam games based on pricing and engagement-related features, including playtime, ownership estimates, reviews, and popularity indicators.
 
-To improve clustering stability and reduce noise, **Principal Component Analysis (PCA)** was used to reduce dimensionality while preserving at least **90%** of the dataset’s variance. Several clustering algorithms were tested, including **K-Means**, **Agglomerative Hierarchical Clustering**, and **Gaussian Mixture Models (GMM)**. Based on internal evaluation metrics (Silhouette Score, Davies–Bouldin Index, and Calinski–Harabasz Index), **K-Means** produced the most stable and interpretable results.
+To enhance clustering stability and reduce noise, Principal Component Analysis (PCA) was employed to reduce dimensionality while preserving at least 90% of the dataset’s variance. Multiple clustering algorithms were evaluated, including K-Means, Agglomerative Hierarchical Clustering, and Gaussian Mixture Models (GMM). According to internal evaluation metrics (Silhouette Score, Davies–Bouldin Index, and Calinski–Harabasz Index), K-Means yielded the most stable and interpretable results.
 
-The final model focused on **paid games with non-zero playtime**, reduced the feature space to **six principal components**, and applied **K-Means with k = 3**. This approach produced three interpretable clusters:
-1. **High-traction mainstream titles** with strong engagement and visibility  
-2. **Heavily discounted games** that still show moderate engagement  
-3. **Long-tail low-traction titles** with low engagement and limited community activity  
+The final model concentrated on paid games with non-zero playtime, reduced the feature space to six principal components, and applied K-Means clustering with k = 3. This approach identified three interpretable clusters:
+
+1. High-traction mainstream titles characterized by strong engagement and visibility
+2. Heavily discounted games that still show moderate engagement
+3. Long-tail low-traction titles with low engagement and limited community activity
 
 Overall, the results show that clustering can reveal meaningful behavioral segments in the Steam marketplace using only pricing and engagement signals.
 
